@@ -5,6 +5,21 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check for touch capability or screen width
+    const checkMobile = () => {
+      setIsMobile(
+        window.matchMedia("(max-width: 768px)").matches ||
+          "ontouchstart" in window,
+      );
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Single set of mouse coordinates
   const mouseX = useMotionValue(-100);
