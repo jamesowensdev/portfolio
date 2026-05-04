@@ -4,10 +4,6 @@ import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    /*
-       1. Removed any 'bg-...' classes from the main tag.
-       2. Kept the relative z-index to 10 so it sits above the heatmap (z-0).
-    */
     <main className="min-h-screen w-full text-[#ECF0F1] relative selection:bg-orange-500/30 pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* SECTION HEADER */}
@@ -17,7 +13,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-4 mb-4"
           >
-            <div className="h-[1px] w-12 bg-indigo-500" />
+            <div className="h-px w-12 bg-indigo-500" />
             <span className="text-xs font-mono uppercase tracking-[0.4em] text-indigo-400">
               User_Profile // Index_01
             </span>
@@ -48,7 +44,7 @@ export default function AboutPage() {
                 and
                 <span className="text-white font-medium italic">
                   {" "}
-                  Data Architect
+                  Data Scientist
                 </span>{" "}
                 dedicated to deciphering the complex spatial-temporal dynamics
                 of the natural world.

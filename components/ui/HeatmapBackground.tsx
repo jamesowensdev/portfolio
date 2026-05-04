@@ -6,14 +6,18 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 export default function HeatmapBackground() {
   const [mounted, setMounted] = useState(false);
 
+  // Motion values for smooth tracking
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
+  // Springs create the "fluid/magma" feel
   const smoothX = useSpring(mouseX, { stiffness: 50, damping: 30 });
   const smoothY = useSpring(mouseY, { stiffness: 50, damping: 30 });
 
   useEffect(() => {
-    // Set initial position to center of screen to avoid jump
+    setMounted(true);
+
+    // Initial center position
     mouseX.set(window.innerWidth / 2);
     mouseY.set(window.innerHeight / 2);
 
@@ -26,38 +30,35 @@ export default function HeatmapBackground() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
-  // If not mounted, render a placeholder with just the background color
-  // and the topography so the page doesn't look "broken" during load
+  // Prevent hydration mismatch
   if (!mounted) {
-    return (
-      <div className="fixed inset-0 w-full h-full bg-[#050214] z-0">
-        <div
-          className="absolute inset-0 opacity-[0.2] z-0 bg-[url('/topography.svg')] invert"
-          style={{ backgroundSize: "700px 700px" }}
-        />
-      </div>
-    );
+    return <div className="fixed inset-0 bg-[#050214] z-0" />;
   }
 
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#050214] pointer-events-none z-[0]">
-      {/* TOPOGRAPHY */}
+    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#050214] z-0">
+      {/* 1. TOPOGRAPHY LAYER */}
       <div
-        className="absolute inset-0 opacity-[0.2] z-0 bg-[url('/topography.svg')] invert"
-        style={{ backgroundSize: "700px 700px" }}
+        className="absolute inset-0 opacity-[0.15] z-0 bg-[url('/topography.svg')] invert transition-opacity duration-1000"
+        style={{ backgroundSize: "800px 800px" }}
       />
 
+      {/* 2. THE MAGMA STACK */}
       <div className="absolute inset-0 z-10 mix-blend-screen">
-        {/* STATIC AMBIENT ZONES */}
+        {/* Large Ambient Purple Glow */}
         <motion.div
-          animate={{ x: ["-5%", "5%"], y: ["0%", "5%"] }}
-          transition={{ duration: 20, repeat: Infinity, repeatType: "mirror" }}
-          className="absolute top-[10%] left-[10%] w-[80vw] h-[80vh] rounded-full bg-indigo-900 opacity-40 blur-[150px]"
+          className="absolute top-0 left-0 w-[45vw] h-[45vw] rounded-full bg-purple-900 opacity-30 blur-[120px]"
+          style={{
+            x: smoothX,
+            y: smoothY,
+            translateX: "-50%",
+            translateY: "-50%",
+          }}
         />
 
-        {/* CONCENTRATED MOUSE HEATMAP STACK */}
+        {/* Mid-sized Orange Intensity */}
         <motion.div
-          className="absolute top-0 left-0 w-[40vw] h-[40vw] rounded-full bg-purple-700 opacity-40 blur-[100px]"
+          className="absolute top-0 left-0 w-[25vw] h-[25vw] rounded-full bg-orange-600 opacity-50 blur-[80px]"
           style={{
             x: smoothX,
             y: smoothY,
@@ -65,17 +66,10 @@ export default function HeatmapBackground() {
             translateY: "-50%",
           }}
         />
+
+        {/* Hot Core Yellow */}
         <motion.div
-          className="absolute top-0 left-0 w-[20vw] h-[20vw] rounded-full bg-orange-600 opacity-60 blur-[60px]"
-          style={{
-            x: smoothX,
-            y: smoothY,
-            translateX: "-50%",
-            translateY: "-50%",
-          }}
-        />
-        <motion.div
-          className="absolute top-0 left-0 w-[8vw] h-[8vw] rounded-full bg-yellow-300 opacity-80 blur-[30px]"
+          className="absolute top-0 left-0 w-[10vw] h-[10vw] rounded-full bg-yellow-400 opacity-70 blur-[40px]"
           style={{
             x: smoothX,
             y: smoothY,
@@ -85,9 +79,9 @@ export default function HeatmapBackground() {
         />
       </div>
 
-      {/* NOISE OVERLAY */}
+      {/* 3. NOISE OVERLAY */}
       <div
-        className="absolute inset-0 opacity-[0.05] mix-blend-overlay z-20 pointer-events-none"
+        className="absolute inset-0 opacity-[0.03] mix-blend-overlay z-20 pointer-events-none"
         style={{
           backgroundImage:
             "url('https://grainy-gradients.vercel.app/noise.svg')",

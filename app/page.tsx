@@ -1,15 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import HeatmapBackground from "@/components/ui/HeatmapBackground";
 import ScrollIndicator from "@/components/ui/ScrollIndicator";
 
 export default function PortfolioPage() {
   return (
     <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory text-[#ECF0F1] relative selection:bg-yellow-300 selection:text-black scroll-smooth">
-      {/* THE BACKGROUND: Persistent across all sections */}
-      <HeatmapBackground />
-
       {/* =========================================
           SECTION 1: HERO
       ========================================= */}
