@@ -55,6 +55,7 @@ const PROJECTS = [
       "Multiple sampling methods to simulate a variety of detection methods along agent paths.",
       "Bayesian geographic profiling analysis in R using the `tidyverse` and `sf` packages.",
       "Hit Score comparisons to evaluate model performance for different detection methods.",
+      "Project repo protected pending paper submission",
     ],
     image: "/heatmap.png",
   },
