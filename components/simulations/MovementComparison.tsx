@@ -21,7 +21,6 @@ const ECOLOGICAL_STATES = [
 
 export default function MovementComparison() {
   const [isPlaying, setIsPlaying] = useState(false);
-
   const [angleIndex, setAngleIndex] = useState(2);
 
   const maxTurnAngle = ALLOWED_ANGLES[angleIndex];
@@ -33,21 +32,46 @@ export default function MovementComparison() {
   const crwPath = useRef<Point[]>([{ x: VIEW_BOX_W / 2, y: VIEW_BOX_H / 2 }]);
 
   const angles = useRef({
-    brownian: Math.random() * 2 * Math.PI,
-    crw: Math.random() * 2 * Math.PI,
+    brownian: 0,
+    crw: 0,
   });
 
-  const [, setRenderTrigger] = useState(0);
+  // Snapshot state specifically for safe rendering
+  const [svgData, setSvgData] = useState({
+    brownianPoly: `${VIEW_BOX_W / 2},${VIEW_BOX_H / 2}`,
+    brownianLast: { x: VIEW_BOX_W / 2, y: VIEW_BOX_H / 2 },
+    crwPoly: `${VIEW_BOX_W / 2},${VIEW_BOX_H / 2}`,
+    crwLast: { x: VIEW_BOX_W / 2, y: VIEW_BOX_H / 2 },
+  });
+
+  // Helper function moved up so it can be used inside the simulation loop
+  const getPolyline = (path: Point[]) =>
+    path.map((p) => `${p.x},${p.y}`).join(" ");
+
+  useEffect(() => {
+    angles.current = {
+      brownian: Math.random() * 2 * Math.PI,
+      crw: Math.random() * 2 * Math.PI,
+    };
+  }, []);
 
   const resetSimulation = () => {
     const center = { x: VIEW_BOX_W / 2, y: VIEW_BOX_H / 2 };
     brownianPath.current = [{ ...center }];
     crwPath.current = [{ ...center }];
+
     angles.current = {
       brownian: Math.random() * 2 * Math.PI,
       crw: Math.random() * 2 * Math.PI,
     };
-    setRenderTrigger((prev) => prev + 1);
+
+    // Reset the visual snapshot
+    setSvgData({
+      brownianPoly: `${center.x},${center.y}`,
+      brownianLast: { ...center },
+      crwPoly: `${center.x},${center.y}`,
+      crwLast: { ...center },
+    });
   };
 
   useEffect(() => {
@@ -101,16 +125,20 @@ export default function MovementComparison() {
         if (crwPath.current.length > MAX_STEPS) crwPath.current.shift();
       }
 
-      setRenderTrigger((prev) => prev + 1);
+      // Take a safe snapshot of the refs for React to render
+      setSvgData({
+        brownianPoly: getPolyline(brownianPath.current),
+        brownianLast: brownianPath.current[brownianPath.current.length - 1],
+        crwPoly: getPolyline(crwPath.current),
+        crwLast: crwPath.current[crwPath.current.length - 1],
+      });
+
       animationFrameId = requestAnimationFrame(simulateStep);
     };
 
     animationFrameId = requestAnimationFrame(simulateStep);
     return () => cancelAnimationFrame(animationFrameId);
   }, [isPlaying, maxTurnAngle]);
-
-  const getPolyline = (path: Point[]) =>
-    path.map((p) => `${p.x},${p.y}`).join(" ");
 
   return (
     <div className="w-full bg-black/40 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden flex flex-col shadow-2xl">
@@ -156,7 +184,7 @@ export default function MovementComparison() {
               className="w-full h-full drop-shadow-[0_0_5px_rgba(129,140,248,0.8)]"
             >
               <polyline
-                points={getPolyline(brownianPath.current)}
+                points={svgData.brownianPoly}
                 fill="none"
                 stroke="rgba(129, 140, 248, 0.7)"
                 strokeWidth="1.5"
@@ -164,8 +192,8 @@ export default function MovementComparison() {
                 strokeLinejoin="round"
               />
               <circle
-                cx={brownianPath.current[brownianPath.current.length - 1].x}
-                cy={brownianPath.current[brownianPath.current.length - 1].y}
+                cx={svgData.brownianLast.x}
+                cy={svgData.brownianLast.y}
                 r="3"
                 fill="#818cf8"
               />
@@ -193,7 +221,7 @@ export default function MovementComparison() {
               className="w-full h-full drop-shadow-[0_0_5px_rgba(249,115,22,0.8)]"
             >
               <polyline
-                points={getPolyline(crwPath.current)}
+                points={svgData.crwPoly}
                 fill="none"
                 stroke="rgba(249, 115, 22, 0.7)"
                 strokeWidth="1.5"
@@ -201,8 +229,8 @@ export default function MovementComparison() {
                 strokeLinejoin="round"
               />
               <circle
-                cx={crwPath.current[crwPath.current.length - 1].x}
-                cy={crwPath.current[crwPath.current.length - 1].y}
+                cx={svgData.crwLast.x}
+                cy={svgData.crwLast.y}
                 r="3"
                 fill="#f97316"
               />
