@@ -388,9 +388,9 @@ export default function ResearchPage() {
             </p>
             <br />
             <p className="text-sm md:text-base text-yellow-300 leading-relaxed">
-              My current work is focussed around adding integrating these
-              ecological rasters with the agent&apos;s movement model, allowing
-              for avoidance of ecological obstacles, and a greater affinity for
+              My current work is focussed around integrating these ecological
+              rasters with the agent&apos;s movement model, allowing for
+              avoidance of ecological obstacles, and a greater affinity for
               suitable habitat when in a foraging state.
             </p>
           </motion.div>
