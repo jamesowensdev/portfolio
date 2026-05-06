@@ -7,8 +7,7 @@ import ScrollIndicator from "@/components/ui/ScrollIndicator";
 
 export default function AboutPage() {
   return (
-    <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory text-[#ECF0F1] relative selection:bg-orange-500/30 scroll-smooth">
-      {/* Custom Terminal Scrollbar */}
+    <main className="h-[100dvh] w-full overflow-y-auto snap-y snap-proximity md:snap-mandatory text-[#ECF0F1] relative selection:bg-orange-500/30 scroll-smooth">
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -34,7 +33,7 @@ export default function AboutPage() {
         {/* =========================================
             SNAP SECTION 01: HEADER & PERSONAL BIO
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <header className="mb-12 md:mb-20">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -81,13 +80,15 @@ export default function AboutPage() {
                   conservation efforts.
                   <br />
                   <br />
-                  When I&apos;m not working, you can find me exploring nature,
-                  enjoying a coffee, or spending time with my family.
+                  UK based, originally from Sheffield, I now live in Belfast
+                  with my fiancé and our baby daughter. When I&apos;m not
+                  working, you can find me exploring nature, enjoying a coffee,
+                  or spending time with my family.
                 </p>
               </div>
 
               {/* Right Column: Stylized Portrait Frame */}
-              <div className="md:col-span-5 relative group mt-6 md:mt-0 max-w-[300px] md:max-w-none mx-auto w-full">
+              <div className="md:col-span-5 relative group mt-6 md:mt-0 max-w-[280px] sm:max-w-[300px] md:max-w-none mx-auto w-full">
                 {/* Tech Bracket Corners */}
                 <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-indigo-500/50 group-hover:border-indigo-400 transition-colors duration-500 z-20 pointer-events-none" />
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-indigo-500/50 group-hover:border-indigo-400 transition-colors duration-500 z-20 pointer-events-none" />
@@ -101,7 +102,6 @@ export default function AboutPage() {
                 {/* Inner Image Container */}
                 <div className="relative aspect-[4/5] w-full bg-black/40 border border-white/10 overflow-hidden backdrop-blur-sm p-2">
                   <div className="relative w-full h-full overflow-hidden bg-[#050214]">
-                    {/* OPTIMIZED NEXT.JS IMAGE */}
                     <Image
                       src="/profile2.jpg"
                       alt="James Owens"
@@ -128,13 +128,15 @@ export default function AboutPage() {
               </div>
             </div>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
 
         {/* =========================================
             SNAP SECTION 02: PROFESSIONAL & ACADEMIC
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -169,21 +171,19 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose mb-10 max-w-3xl">
                 <div className="p-5 bg-white/5 border border-white/10 rounded-sm backdrop-blur-sm hover:border-orange-500/30 transition-colors">
-                  <h3 className="font-mono text-[10px] text-indigo-400 uppercase tracking-widest mb-2">
+                  <h3 className="font-mono text-[10px] text-indigo-400 uppercase tracking-widest mb-3">
                     Data Science & Geospatial Analysis
                   </h3>
-                  <ul>
+                  <ul className="space-y-3">
                     <li className="text-xs">
                       <span className="text-orange-500">Python:</span> pandas,
                       numpy, geopandas, scikit-learn, xarray, rasterio,
                       matplotlib, seaborn, steamlit
                     </li>
-                    <br></br>
                     <li className="text-xs">
                       <span className="text-orange-500">R:</span> tidyverse,
                       terra, sf, brms, shiny, R6, vegan, lme4, mgcv
                     </li>
-                    <br></br>
                     <li className="text-xs">
                       <span className="text-orange-500">
                         Geospatial Software:
@@ -193,20 +193,18 @@ export default function AboutPage() {
                   </ul>
                 </div>
                 <div className="p-5 bg-white/5 border border-white/10 rounded-sm backdrop-blur-sm hover:border-yellow-400/30 transition-colors">
-                  <h3 className="font-mono text-[10px] text-orange-500 uppercase tracking-widest mb-2">
+                  <h3 className="font-mono text-[10px] text-orange-500 uppercase tracking-widest mb-3">
                     Software Engineering
                   </h3>
-                  <ul>
+                  <ul className="space-y-3">
                     <li className="text-xs">
                       <span className="text-yellow-300">Languages:</span>{" "}
                       Python, R, Java, C, C++, TypeScript, Rust
                     </li>
-                    <br></br>
                     <li className="text-xs">
                       <span className="text-yellow-300">Web & Front End:</span>{" "}
                       React, HTML5, CSS3 (SASS, Tailwind)
                     </li>
-                    <br></br>
                     <li className="text-xs">
                       <span className="text-yellow-300">Databases:</span>{" "}
                       PostgreSQL, MySQL, MongoDB, OracleDB
@@ -216,7 +214,7 @@ export default function AboutPage() {
               </div>
 
               {/* OUTSTANDING CTA TO RESEARCH PAGE */}
-              <div className="not-prose">
+              <div className="not-prose mt-4 md:mt-0">
                 <Link
                   href="/research"
                   className="group inline-flex items-center gap-4 px-6 py-4 bg-orange-500/10 border border-orange-500/30 rounded-sm hover:bg-orange-500/20 hover:border-yellow-400/50 hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300 cursor-none"
@@ -241,13 +239,15 @@ export default function AboutPage() {
               </div>
             </div>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
 
         {/* =========================================
             SNAP SECTION 03: SCROLLABLE RESUME
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -255,27 +255,27 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="w-full"
           >
-            <h2 className="text-sm md:text-base font-mono uppercase tracking-[0.3em] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-orange-500 inline-block">
+            <h2 className="text-sm md:text-base font-mono uppercase tracking-[0.3em] mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-orange-500 inline-block">
               03 // Career_Telemetry
             </h2>
 
             <div>
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden h-[450px] md:h-[500px] relative flex flex-col shadow-2xl">
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/5">
-                  <div className="w-2 h-2 rounded-full bg-white/20" />
-                  <div className="w-2 h-2 rounded-full bg-white/20" />
-                  <div className="w-2 h-2 rounded-full bg-white/20" />
+              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden h-[60vh] md:h-[500px] relative flex flex-col shadow-2xl">
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/5 shrink-0">
+                  <div className="w-2 h-2 rounded-full bg-red-500/50" />
+                  <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
+                  <div className="w-2 h-2 rounded-full bg-green-500/50" />
                   <span className="ml-2 text-[9px] font-mono text-white/40 uppercase tracking-widest">
                     cv_data_stream.log
                   </span>
                 </div>
 
-                <div className="p-6 md:p-8 overflow-y-auto resume-scroll flex-1">
+                <div className="p-5 md:p-8 overflow-y-auto resume-scroll flex-1">
                   <div className="text-[10px] font-mono text-indigo-400 tracking-widest ml-2 pl-6">
                     EMPLOYMENT
                   </div>
                   <br />
-                  <div className="space-y-12 border-l border-white/10 ml-2 pl-6 md:pl-8 relative">
+                  <div className="space-y-10 md:space-y-12 border-l border-white/10 ml-2 pl-6 md:pl-8 relative">
                     <div className="relative">
                       <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-[#050214] border-2  border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
@@ -388,7 +388,7 @@ export default function AboutPage() {
                     <div className="text-[10px] font-mono text-indigo-400 tracking-widest mb-1">
                       EDUCATION
                     </div>
-                    <div className="relative pt-3">
+                    <div className="relative pt-2 md:pt-3">
                       <div className="absolute -left-[29px] md:-left-[37px] top-4 w-3 h-3 rounded-full bg-[#050214] border-2 border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2022 — JUNE 2024
@@ -400,7 +400,7 @@ export default function AboutPage() {
                         Distinction
                       </h4>
                     </div>
-                    <div className="relative pt-3">
+                    <div className="relative pt-2 md:pt-3">
                       <div className="absolute -left-[29px] md:-left-[37px] top-4 w-3 h-3 rounded-full bg-[#050214] border-2 border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2022 — JUNE 2024
@@ -411,7 +411,7 @@ export default function AboutPage() {
                       <h4 className="text-sm font-light text-orange-500">
                         First Class Honours
                       </h4>
-                      <h5 className="text-sm font-light text-white/60">
+                      <h5 className="text-sm font-light text-white/60 mt-2">
                         <em className="text-indigo-400">Thesis subjects :</em>
                         <br />
                         Social and Demographic Drivers of Male Elephant

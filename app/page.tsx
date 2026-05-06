@@ -5,11 +5,11 @@ import ScrollIndicator from "@/components/ui/ScrollIndicator";
 
 export default function PortfolioPage() {
   return (
-    <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory text-[#ECF0F1] relative selection:bg-yellow-300 selection:text-black scroll-smooth">
+    <main className="h-[100dvh] w-full overflow-y-auto snap-y snap-proximity md:snap-mandatory text-[#ECF0F1] relative selection:bg-yellow-300 selection:text-black scroll-smooth">
       {/* =========================================
           SECTION 1: HERO
       ========================================= */}
-      <section className="h-screen w-full snap-start relative flex flex-col items-center justify-center z-10 px-6">
+      <section className="min-h-[100dvh] w-full snap-start relative flex flex-col items-center justify-center z-10 px-6">
         <div className="text-center mt-16 md:mt-0">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -30,22 +30,23 @@ export default function PortfolioPage() {
           </motion.p>
         </div>
 
-        <ScrollIndicator />
+        <div className="hidden md:block">
+          <ScrollIndicator />
+        </div>
       </section>
 
       {/* =========================================
           SECTION 2: DIRECTORY
       ========================================= */}
-      <section className="min-h-screen md:h-screen w-full snap-start relative flex items-center justify-center z-10 px-6 py-24 md:py-0">
-        <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <section className="min-h-[100dvh] w-full snap-start relative flex flex-col justify-start md:justify-center z-10 px-6 pt-24 pb-16 md:py-0">
+        <div className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* CARD 01: ABOUT */}
           <a
             href="/about"
             className="group relative p-8 h-87.5 md:h-112.5 bg-black/20 backdrop-blur-xl border border-white/5 transition-all duration-500 hover:bg-black/40"
           >
-            {/* Density Stripe */}
             <div className="absolute top-0 left-0 w-full h-0.5 bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
-            {/* Corner Brackets */}
+
             <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/10 group-hover:border-indigo-400/50 transition-colors" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/10 group-hover:border-indigo-400/50 transition-colors" />
 
@@ -58,8 +59,7 @@ export default function PortfolioPage() {
                 About Me
               </h3>
               <p className="mt-3 md:mt-4 text-xs md:text-sm text-white/40 leading-relaxed font-light">
-                Bridging the gap between biological datasets and visual
-                storytelling through spatial analysis.
+                Deatils of my personal and professional background.
               </p>
               <div className="mt-auto pt-4 flex items-center gap-3 font-mono text-[9px] text-white/20 group-hover:text-indigo-400 transition-colors">
                 <div className="h-px w-8 bg-white/10 group-hover:bg-indigo-400 transition-all" />
@@ -86,8 +86,7 @@ export default function PortfolioPage() {
                 Research
               </h3>
               <p className="mt-3 md:mt-4 text-xs md:text-sm text-white/40 leading-relaxed font-light">
-                Peer-reviewed investigations into biodiversity hotspots and
-                climate-driven migration.
+                A crash-course on my research topic
               </p>
               <div className="mt-auto pt-4 flex items-center gap-3 font-mono text-[9px] text-white/20 group-hover:text-orange-500 transition-colors">
                 <div className="h-px w-8 bg-white/10 group-hover:bg-orange-500 transition-all" />
@@ -114,8 +113,7 @@ export default function PortfolioPage() {
                 Projects
               </h3>
               <p className="mt-3 md:mt-4 text-xs md:text-sm text-white/40 leading-relaxed font-light">
-                Custom Python libraries and interactive web-maps for real-time
-                ecological monitoring.
+                Insights into technical projects, both personal and academic
               </p>
               <div className="mt-auto pt-4 flex items-center gap-3 font-mono text-[9px] text-white/20 group-hover:text-yellow-300 transition-colors">
                 <div className="h-px w-8 bg-white/10 group-hover:bg-yellow-300 transition-all" />
@@ -129,8 +127,8 @@ export default function PortfolioPage() {
       {/* =========================================
           SECTION 3: CONTACT
       ========================================= */}
-      <section className="h-screen w-full snap-start relative flex items-center justify-center z-10 px-6 bg-linear-to-t from-black/60 to-transparent">
-        <div className="max-w-4xl w-full text-center">
+      <section className="min-h-[100dvh] w-full snap-start relative flex flex-col justify-start md:justify-center z-10 px-6 pt-24 pb-16 md:py-0 bg-linear-to-t from-black/60 to-transparent">
+        <div className="max-w-4xl w-full mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +144,7 @@ export default function PortfolioPage() {
 
             <a
               href="mailto:jamesowenswildlife@gmail.com"
-              className="text-xl sm:text-2xl md:text-4xl font-light text-white/80 hover:text-yellow-300 transition-colors duration-300 underline underline-offset-8 decoration-white/10 hover:decoration-yellow-300/50"
+              className="text-xl sm:text-2xl md:text-4xl font-light text-white/80 hover:text-yellow-300 transition-colors duration-300 underline underline-offset-8 decoration-white/10 hover:decoration-yellow-300/50 break-all"
             >
               jamesowenswildlife@gmail.com
             </a>

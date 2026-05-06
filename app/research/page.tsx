@@ -7,12 +7,13 @@ import GeographicProfiling from "@/components/simulations/GeographicProfiling";
 
 export default function ResearchPage() {
   return (
-    <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory text-[#ECF0F1] relative selection:bg-orange-500/30 scroll-smooth">
+    <main className="h-[100dvh] w-full overflow-y-auto snap-y snap-proximity md:snap-mandatory text-[#ECF0F1] relative selection:bg-orange-500/30 scroll-smooth">
       <div className="max-w-5xl mx-auto relative z-10 w-full">
         {/* =========================================
             SNAP SECTION 01: HEADER & OVERVIEW
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <header className="mb-12 md:mb-16">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -61,13 +62,15 @@ export default function ResearchPage() {
               SPATIAL MODELS → ECOLOGICAL MODELS
             </p>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
 
         {/* =========================================
             SNAP SECTION 02: GP INTRODUCTION
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -90,20 +93,18 @@ export default function ResearchPage() {
               <br></br>
               The method is based on a few key concepts:
             </p>
-            <ul className="text-sm md:text-base text-white/60 leading-relaxed mb-4">
+            <ul className="text-sm md:text-base text-white/60 leading-relaxed mb-4 space-y-4">
               <li>
                 <em className="text-yellow-300">Principle of Least Effort </em>-
                 Excluding other external variables, an individual will choose to
                 commit an act at the minimum distance required to reach a target
               </li>
-              <br />
               <li>
                 <em className="text-yellow-300">Buffer Zone</em> - The area
                 immediately surrounding the anchor point has a low probability
                 of incident due to the avoidance of “fouling the nest”, rather
                 than a lack of ability or opportunity.
               </li>
-              <br />
               <li>
                 <em className="text-yellow-300">Decay Distance</em>- The
                 probability of an incident decreases with distance from the
@@ -116,12 +117,15 @@ export default function ResearchPage() {
               a highly targeted search area.
             </p>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
+
         {/* =========================================
             SNAP SECTION 03: GEO PROFILING WIDGET
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-20 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -129,14 +133,16 @@ export default function ResearchPage() {
             transition={{ duration: 0.6 }}
             className="w-full"
           >
-            <h2 className="text-sm md:text-base font-mono uppercase tracking-[0.3em] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400 inline-block">
+            <h2 className="text-sm md:text-base font-mono uppercase tracking-[0.3em] mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400 inline-block">
               02 // Geographic Profiling Showcase
             </h2>
 
             <GeographicProfiling />
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-white/60 font-light border-t border-white/10 pt-8">
+
+            {/* Reduced top margin on mobile, adjusted grid spacing */}
+            <div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-sm text-white/60 font-light border-t border-white/10 pt-6 md:pt-8">
               <div>
-                <h4 className="text-[10px] font-mono tracking-widest uppercase text-indigo-400 mb-2">
+                <h4 className="text-[10px] font-mono tracking-widest uppercase text-indigo-400 mb-1 md:mb-2">
                   The Buffer Zone (B)
                 </h4>
                 <p className="leading-relaxed text-[12px]">
@@ -149,7 +155,7 @@ export default function ResearchPage() {
               </div>
 
               <div>
-                <h4 className="text-[10px] font-mono tracking-widest uppercase text-orange-400 mb-2">
+                <h4 className="text-[10px] font-mono tracking-widest uppercase text-orange-400 mb-1 md:mb-2">
                   Distance Decay (f & g)
                 </h4>
                 <p className="leading-relaxed text-[12px]">
@@ -163,7 +169,7 @@ export default function ResearchPage() {
               </div>
 
               <div>
-                <h4 className="text-[10px] font-mono tracking-widest uppercase text-yellow-300 mb-2">
+                <h4 className="text-[10px] font-mono tracking-widest uppercase text-yellow-300 mb-1 md:mb-2">
                   Spatial Certainty
                 </h4>
                 <p className="leading-relaxed text-[12px]">
@@ -176,13 +182,15 @@ export default function ResearchPage() {
               </div>
             </div>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
 
         {/* =========================================
             SNAP SECTION 04: ECOLOGICAL GP APPLICATION
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -205,21 +213,19 @@ export default function ResearchPage() {
               locations of roosts or nest sites, but they can also be linked to
               breeding sites and food caches.
             </p>
-            <p className="text-sm md:text-base text-white/60 leading-relaxed">
+            <p className="text-sm md:text-base text-white/60 leading-relaxed mb-6">
               The spatial ecology of CPF species is altered due to the
               constraint of being tethered to a specific anchor point, and as
               such their foraging patterns can be considered comparatively with
-              Rossmo&apos;s original concepts.<br></br>
-              <br></br>
+              Rossmo&apos;s original concepts.
             </p>
-            <ul className="text-sm md:text-base text-white/60 leading-relaxed mb-4">
+            <ul className="text-sm md:text-base text-white/60 leading-relaxed mb-4 space-y-4">
               <li>
                 <em className="text-yellow-300">Principle of Least Effort </em>-
                 Excluding other external variables, an animal will choose to
                 forage at the minimum distance required to reach a suitable
                 habitat
               </li>
-              <br />
               <li>
                 <em className="text-yellow-300">Buffer Zone</em> - The area
                 immediately surrounding the anchor point has a lower probability
@@ -227,7 +233,6 @@ export default function ResearchPage() {
                 nest location. Particularly poignant in the case of mothers with
                 young offspring.
               </li>
-              <br />
               <li>
                 <em className="text-yellow-300">Decay Distance</em>- The
                 probability of foraging decreases with distance from the anchor
@@ -240,13 +245,15 @@ export default function ResearchPage() {
               </li>
             </ul>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
 
         {/* =========================================
             SNAP SECTION 05: AGENT BASED MODELING
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -266,21 +273,20 @@ export default function ResearchPage() {
               they are strictly spatial tools which do not see the ecological
               big picture.
             </p>
-            <p className="text-sm md:text-base text-white/60 leading-relaxed">
+            <p className="text-sm md:text-base text-white/60 leading-relaxed mb-4">
               Animals do not move arbitrarily through their landscape, rather
-              there are a multitude of factors which impact their behavior.
+              there are a multitude of factors which impact their behaviour.
               These can vary from avoidance of anthropogenic factors, to being
               drawn to specific habitats types to feed. Therefore, where current
               GP models may predict an anchor point may be skewed as a result of
               sighting density in favoured habitats, rather than considering the
               spatial distribution of resources in their priors.
             </p>
-            <br></br>
             <p className="text-sm md:text-base text-white/60 leading-relaxed">
               In order to test the robustness of these models, we must first
               have sightings data across multiple species, landscapes and
               sampling methods. This will allow us to evaluate how well the
-              models generalize to unseen data. However, in reality such
+              models generalise to unseen data. However, in reality such
               datasets are often limited by the availability of data and the
               cost of collecting it. In order to overcome these limitations, and
               to allow us to replicate movement consistently, we are using an
@@ -293,7 +299,7 @@ export default function ResearchPage() {
         {/* =========================================
             SNAP SECTION 06: MOVEMENT WIDGET
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-20 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -301,15 +307,16 @@ export default function ResearchPage() {
             transition={{ duration: 0.6 }}
             className="w-full"
           >
-            <h2 className="text-sm md:text-base font-mono uppercase tracking-[0.3em] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 inline-block">
+            <h2 className="text-sm md:text-base font-mono uppercase tracking-[0.3em] mb-6 md:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 inline-block">
               05 // SIMULATING MOVEMENT
             </h2>
 
             <MovementComparison />
+
             {/* Explanatory Footer: CRW vs Brownian Motion */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-white/60 font-light border-t border-white/10 pt-8">
+            <div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-sm text-white/60 font-light border-t border-white/10 pt-6 md:pt-8">
               <div>
-                <h4 className="text-[10px] font-mono tracking-widest uppercase text-indigo-400 mb-2">
+                <h4 className="text-[10px] font-mono tracking-widest uppercase text-indigo-400 mb-1 md:mb-2">
                   The Brownian Baseline
                 </h4>
                 <p className="leading-relaxed text-[12px]">
@@ -322,7 +329,7 @@ export default function ResearchPage() {
               </div>
 
               <div>
-                <h4 className="text-[10px] font-mono tracking-widest uppercase text-orange-400 mb-2">
+                <h4 className="text-[10px] font-mono tracking-widest uppercase text-orange-400 mb-1 md:mb-2">
                   Correlated Trajectories (CRW)
                 </h4>
                 <p className="leading-relaxed text-[12px]">
@@ -335,7 +342,7 @@ export default function ResearchPage() {
               </div>
 
               <div>
-                <h4 className="text-[10px] font-mono tracking-widest uppercase text-yellow-300 mb-2">
+                <h4 className="text-[10px] font-mono tracking-widest uppercase text-yellow-300 mb-1 md:mb-2">
                   Ecological Accuracy
                 </h4>
                 <p className="leading-relaxed text-[12px]">
@@ -349,13 +356,15 @@ export default function ResearchPage() {
               </div>
             </div>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
 
         {/* =========================================
             SNAP SECTION 07: ABM EXPLORATION
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -379,16 +388,15 @@ export default function ResearchPage() {
               change how it moves when hunting vs returning to its anchor point
               vs exploring new areas.
             </p>
-            <p className="text-sm md:text-base text-white/60 leading-relaxed">
+            <p className="text-sm md:text-base text-white/60 leading-relaxed mb-6">
               The step selection function implementation also allows us to
               determine when and how the agent should change its movement
               strategy, this leads into a dynamic movement model wherein the
               agent interacts with a stack of environment rasters to determine
               its next step.
             </p>
-            <br />
             <p className="text-sm md:text-base text-yellow-300 leading-relaxed">
-              My current work is focussed around integrating these ecological
+              My current work is focused around integrating these ecological
               rasters with the agent&apos;s movement model, allowing for
               avoidance of ecological obstacles, and a greater affinity for
               suitable habitat when in a foraging state.

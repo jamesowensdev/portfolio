@@ -96,7 +96,7 @@ export default function ProjectsPage() {
   return (
     <main
       ref={scrollRef}
-      className="h-screen w-full overflow-y-scroll snap-y snap-mandatory text-[#ECF0F1] relative selection:bg-orange-500/30 scroll-smooth"
+      className="h-[100dvh] w-full overflow-y-auto snap-y snap-proximity md:snap-mandatory text-[#ECF0F1] relative selection:bg-orange-500/30 scroll-smooth"
     >
       <style
         dangerouslySetInnerHTML={{
@@ -113,7 +113,7 @@ export default function ProjectsPage() {
         {/* =========================================
             SNAP SECTION 01: HEADER
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <header className="mb-12 md:mb-16">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -147,20 +147,22 @@ export default function ProjectsPage() {
               Bridging the gap between ecology and technology
             </p>
             <p className="text-sm md:text-base text-white/60 leading-relaxed mb-8">
-              Below is an collection of technical projects I have completed
-              recently.These were made as part of my PhD research, to learn new
-              skills, or simply to make my day to day or research workflow more
+              Below is a collection of technical projects I have completed
+              recently. These were made as part of my PhD research, to learn new
+              skills, or simply to make my day-to-day or research workflow more
               efficient. <br></br> <br></br>
               Select a directory to view the project specifications.
             </p>
           </motion.div>
-          <ScrollIndicator />
+          <div className="hidden md:block">
+            <ScrollIndicator />
+          </div>
         </section>
 
         {/* =========================================
             SNAP SECTION 02: THE SPLIT-PANE TERMINAL
         ========================================= */}
-        <section className="min-h-screen w-full snap-start flex flex-col justify-center px-6 py-24 relative">
+        <section className="min-h-[100dvh] w-full snap-start flex flex-col justify-start md:justify-center px-6 pt-24 pb-16 md:py-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -190,7 +192,7 @@ export default function ProjectsPage() {
                       onClick={() => setActiveProjectId(project.id)}
                       className={`
                         text-left flex flex-col p-4 rounded-sm transition-all duration-300 min-w-[200px] md:min-w-0 cursor-none
-                        ${isActive ? `bg-white/10 border-l-2 ${project.border}` : `hover:bg-white/5 border-l-2 border-transparent`}
+                        ${isActive ? `bg-white/10 border-l-2 md:border-b-0 border-b-2 md:border-l-2 ${project.border}` : `hover:bg-white/5 border-l-2 border-transparent`}
                       `}
                     >
                       <span
