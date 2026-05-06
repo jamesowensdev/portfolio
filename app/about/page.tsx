@@ -277,7 +277,7 @@ export default function AboutPage() {
                   <br />
                   <div className="space-y-12 border-l border-white/10 ml-2 pl-6 md:pl-8 relative">
                     <div className="relative">
-                      <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-[#050214] border-2 border-yellow-300 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
+                      <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-[#050214] border-2  border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         OCTOBER 2025 — PRESENT
                       </div>
@@ -306,7 +306,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="relative">
-                      <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-[#050214] border-2 border-white/30" />
+                      <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-[#050214] border-2  border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2023 — OCTOBER 2025
                       </div>
@@ -348,7 +348,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="relative">
-                      <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-[#050214] border-2 border-white/30" />
+                      <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-3 h-3 rounded-full bg-[#050214] border-2 border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2021 — SEPTEMBER 2023
                       </div>
@@ -389,7 +389,7 @@ export default function AboutPage() {
                       EDUCATION
                     </div>
                     <div className="relative pt-3">
-                      <div className="absolute -left-[29px] md:-left-[37px] top-4 w-3 h-3 rounded-full bg-[#050214] border-2 border-indigo-400" />
+                      <div className="absolute -left-[29px] md:-left-[37px] top-4 w-3 h-3 rounded-full bg-[#050214] border-2 border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2022 — JUNE 2024
                       </div>
@@ -401,7 +401,7 @@ export default function AboutPage() {
                       </h4>
                     </div>
                     <div className="relative pt-3">
-                      <div className="absolute -left-[29px] md:-left-[37px] top-4 w-3 h-3 rounded-full bg-[#050214] border-2 border-indigo-400" />
+                      <div className="absolute -left-[29px] md:-left-[37px] top-4 w-3 h-3 rounded-full bg-[#050214] border-2 border-indigo-400 shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2022 — JUNE 2024
                       </div>
