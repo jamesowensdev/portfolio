@@ -35,7 +35,7 @@ This build moves beyond standard static templates by utilising hardware-accelera
 
 To run this project locally, ensure you have Node.js installed, then execute the following commands in your terminal:
 
-\`\`\`bash
+```
 # 1. Clone the repository
 git clone https://github.com/jamesowensdev/portfolio.git
 
@@ -47,7 +47,7 @@ npm install
 
 # 4. Start the development server
 npm run dev
-\`\`\`
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to view the active build.
 
