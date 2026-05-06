@@ -139,8 +139,8 @@ export default function GeographicProfiling() {
           </h3>
           <p className="text-[9px] text-white/50 leading-relaxed mb-6 font-mono">
             Grid-based profiling utilising Dr. Kim Rossmo&apos;s complete
-            formula. Confidence is calculated via inverse spatial variance (Hit
-            Score Area).
+            formula. Click to add incident points. Confidence is calculated via
+            inverse spatial variance (Hit Score Area).
           </p>
 
           <div className="space-y-5">
