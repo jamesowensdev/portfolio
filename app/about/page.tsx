@@ -100,7 +100,7 @@ export default function AboutPage() {
                 <div className="absolute -bottom-4 left-1/2 w-[1px] h-2 bg-white/20 z-20 pointer-events-none" />
 
                 {/* Inner Image Container */}
-                <div className="relative aspect-[4/5] w-full bg-black/20 border border-white/10 overflow-hidden backdrop-blur-sm p-2">
+                <div className="relative aspect-[4/5] w-full bg-black/10 border border-white/10 overflow-hidden backdrop-blur-sm p-2">
                   <div className="relative w-full h-full overflow-hidden bg-[#050214]">
                     <Image
                       src="/profile2.jpg"
@@ -138,7 +138,7 @@ export default function AboutPage() {
             </h2>
 
             <div className="max-w-none">
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl mb-10 max-w-3xl prose prose-invert">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl mb-10 max-w-3xl prose prose-invert">
                 <p className="text-lg md:text-xl leading-relaxed text-white font-light mb-6">
                   I am a{" "}
                   <span className="text-yellow-300 font-medium italic">
@@ -161,7 +161,7 @@ export default function AboutPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose mb-10 max-w-3xl">
-                <div className="p-5 bg-black/20 border border-white/10 rounded-sm backdrop-blur-md hover:border-orange-500/30 transition-colors shadow-xl">
+                <div className="p-5 bg-black/10 border border-white/10 rounded-sm backdrop-blur-md hover:border-orange-500/30 transition-colors shadow-xl">
                   <h3 className="font-mono text-[10px] text-indigo-400 uppercase tracking-widest mb-3">
                     Data Science & Geospatial Analysis
                   </h3>
@@ -183,7 +183,7 @@ export default function AboutPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="p-5 bg-black/20 border border-white/10 rounded-sm backdrop-blur-md hover:border-yellow-400/30 transition-colors shadow-xl">
+                <div className="p-5 bg-black/10 border border-white/10 rounded-sm backdrop-blur-md hover:border-yellow-400/30 transition-colors shadow-xl">
                   <h3 className="font-mono text-[10px] text-orange-500 uppercase tracking-widest mb-3">
                     Software Engineering
                   </h3>
@@ -251,7 +251,7 @@ export default function AboutPage() {
             </h2>
 
             <div>
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden h-[60vh] md:h-[500px] relative flex flex-col shadow-2xl">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden h-[60vh] md:h-[500px] relative flex flex-col shadow-2xl">
                 <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/5 shrink-0">
                   <div className="w-2 h-2 rounded-full bg-red-500/50" />
                   <div className="w-2 h-2 rounded-full bg-yellow-500/50" />

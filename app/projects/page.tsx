@@ -144,7 +144,7 @@ export default function ProjectsPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full max-w-3xl"
           >
-            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
+            <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
               <p className="text-lg md:text-xl leading-relaxed font-light mb-6 text-orange-500">
                 Bridging the gap between ecology and technology
               </p>
@@ -171,11 +171,11 @@ export default function ProjectsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ root: scrollRef, once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="w-full h-[75vh] md:h-[650px] bg-black/20 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden flex flex-col md:flex-row shadow-2xl"
+            className="w-full h-[75vh] md:h-[650px] bg-black/10 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden flex flex-col md:flex-row shadow-2xl"
           >
             {/* LEFT PANE: DIRECTORY NAVIGATION */}
             <nav className="w-full md:w-[30%] shrink-0 border-b md:border-b-0 md:border-r border-white/10 bg-white/[0.02] flex flex-col">
-              <div className="p-4 md:p-6 border-b border-white/10 bg-black/20 flex items-center gap-3">
+              <div className="p-4 md:p-6 border-b border-white/10 bg-black/10 flex items-center gap-3">
                 <div className="flex gap-1.5">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />

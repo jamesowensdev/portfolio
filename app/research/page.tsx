@@ -44,7 +44,7 @@ export default function ResearchPage() {
             transition={{ duration: 0.6 }}
             className="w-full max-w-3xl"
           >
-            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
+            <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
               <p className="text-lg md:text-xl leading-relaxed text-yellow-300 font-light mb-6">
                 My core research investigates using geographic profiling (GP)
                 methods to identify wildlife breeding sites from sighting data
@@ -84,7 +84,7 @@ export default function ResearchPage() {
               01 // What is Geographic Profiling?
             </h2>
 
-            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
+            <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
               <p className="text-lg md:text-xl leading-relaxed text-orange-400 font-light mb-6">
                 Theoretical Background
               </p>
@@ -148,7 +148,7 @@ export default function ResearchPage() {
             <GeographicProfiling />
 
             <div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-sm text-white/60 font-light">
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-indigo-400/30 transition-colors">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-indigo-400/30 transition-colors">
                 <h4 className="text-[10px] font-mono tracking-widest uppercase text-indigo-400 mb-1 md:mb-2">
                   The Buffer Zone (B)
                 </h4>
@@ -161,7 +161,7 @@ export default function ResearchPage() {
                 </p>
               </div>
 
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-orange-400/30 transition-colors">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-orange-400/30 transition-colors">
                 <h4 className="text-[10px] font-mono tracking-widest uppercase text-orange-400 mb-1 md:mb-2">
                   Distance Decay (f & g)
                 </h4>
@@ -175,7 +175,7 @@ export default function ResearchPage() {
                 </p>
               </div>
 
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-yellow-300/30 transition-colors">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-yellow-300/30 transition-colors">
                 <h4 className="text-[10px] font-mono tracking-widest uppercase text-yellow-300 mb-1 md:mb-2">
                   Spatial Certainty
                 </h4>
@@ -209,7 +209,7 @@ export default function ResearchPage() {
               03 // Bridging the ecological gap
             </h2>
 
-            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
+            <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
               <p className="text-lg md:text-xl leading-relaxed text-orange-400 font-light mb-6">
                 Turning crime fighting methods into conservation tools
               </p>
@@ -277,7 +277,7 @@ export default function ResearchPage() {
               04 // Agent_Based_Modeling
             </h2>
 
-            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
+            <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
               <p className="text-lg md:text-xl leading-relaxed text-orange-400 font-light mb-6">
                 HOW CAN WE TEST THE BREAKING POINT OF GP MODELS?
               </p>
@@ -330,7 +330,7 @@ export default function ResearchPage() {
             <MovementComparison />
 
             <div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-sm text-white/60 font-light">
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-indigo-400/30 transition-colors">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-indigo-400/30 transition-colors">
                 <h4 className="text-[10px] font-mono tracking-widest uppercase text-indigo-400 mb-1 md:mb-2">
                   The Brownian Baseline
                 </h4>
@@ -343,7 +343,7 @@ export default function ResearchPage() {
                 </p>
               </div>
 
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-orange-400/30 transition-colors">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-orange-400/30 transition-colors">
                 <h4 className="text-[10px] font-mono tracking-widest uppercase text-orange-400 mb-1 md:mb-2">
                   Correlated Trajectories (CRW)
                 </h4>
@@ -356,7 +356,7 @@ export default function ResearchPage() {
                 </p>
               </div>
 
-              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-yellow-300/30 transition-colors">
+              <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-4 md:p-5 shadow-xl hover:border-yellow-300/30 transition-colors">
                 <h4 className="text-[10px] font-mono tracking-widest uppercase text-yellow-300 mb-1 md:mb-2">
                   Ecological Accuracy
                 </h4>
@@ -391,7 +391,7 @@ export default function ResearchPage() {
               06 // expanding the movement model
             </h2>
 
-            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
+            <div className="bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
               <p className="text-lg md:text-xl leading-relaxed text-orange-400 font-light mb-6">
                 A movement mechanism alone is not sufficient to generate
                 realistic tracks for animals, we must consider what ecological

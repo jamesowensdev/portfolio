@@ -43,7 +43,7 @@ export default function PortfolioPage() {
           {/* CARD 01: ABOUT */}
           <a
             href="/about"
-            className="group relative p-8 h-87.5 md:h-112.5 bg-black/20 backdrop-blur-xl border border-white/5 transition-all duration-500 hover:bg-black/40"
+            className="group relative p-8 h-87.5 md:h-112.5 bg-black/10 backdrop-blur-xl border border-white/5 transition-all duration-500 hover:bg-black/40"
           >
             <div className="absolute top-0 left-0 w-full h-0.5 bg-indigo-500/50 group-hover:bg-indigo-400 transition-colors" />
 
@@ -71,7 +71,7 @@ export default function PortfolioPage() {
           {/* CARD 02: RESEARCH */}
           <a
             href="/research"
-            className="group relative p-8 h-87.5 md:h-112.5 bg-black/20 backdrop-blur-xl border border-white/5 transition-all duration-500 hover:bg-black/40"
+            className="group relative p-8 h-87.5 md:h-112.5 bg-black/10 backdrop-blur-xl border border-white/5 transition-all duration-500 hover:bg-black/40"
           >
             <div className="absolute top-0 left-0 w-full h-0.5 bg-orange-500/50 group-hover:bg-orange-500 transition-colors" />
             <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/10 group-hover:border-orange-500/50 transition-colors" />
@@ -98,7 +98,7 @@ export default function PortfolioPage() {
           {/* CARD 03: PROJECTS */}
           <a
             href="/projects"
-            className="group relative p-8 h-87.5 md:h-112.5 bg-black/20 backdrop-blur-xl border border-white/5 transition-all duration-500 hover:bg-black/40"
+            className="group relative p-8 h-87.5 md:h-112.5 bg-black/10 backdrop-blur-xl border border-white/5 transition-all duration-500 hover:bg-black/40"
           >
             <div className="absolute top-0 left-0 w-full h-0.5 bg-yellow-500/50 group-hover:bg-yellow-300 transition-colors" />
             <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/10 group-hover:border-yellow-300/50 transition-colors" />
