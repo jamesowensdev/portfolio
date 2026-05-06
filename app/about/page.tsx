@@ -426,7 +426,8 @@ export default function AboutPage() {
 
               <div className="mt-4 flex justify-end">
                 <a
-                  href="#"
+                  href="/JamesOwensCV.pdf"
+                  download="JamesOwensCV.pdf"
                   className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-white/40 hover:text-white transition-colors group cursor-none"
                 >
                   <svg
