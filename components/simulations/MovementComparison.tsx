@@ -22,7 +22,7 @@ const ECOLOGICAL_STATES = [
 export default function MovementComparison() {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const [angleIndex, setAngleIndex] = useState(2); // Defaults to index 2 (60 degrees)
+  const [angleIndex, setAngleIndex] = useState(2);
 
   const maxTurnAngle = ALLOWED_ANGLES[angleIndex];
   const currentStateLabel = ECOLOGICAL_STATES[angleIndex];

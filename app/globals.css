@@ -25,18 +25,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
-    cursor: none !important;
+@media (pointer: fine) {
+    * {
+        cursor: none !important;
+    }
 }
 
-@media (max-width: 768px) {
-    html,
-    body {
+@media (max-width: 768px), (pointer: coarse) {
+    * {
         cursor: auto !important;
-    }
-    @media (hover: none) {
-        .hover\:text-white:hover {
-            color: inherit;
-        }
     }
 }

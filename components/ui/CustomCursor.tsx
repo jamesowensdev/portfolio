@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
-  const [isHovering, setIsHovering] = useState(false); // eslint-disable-next-line
+  const [isHovering, setIsHovering] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check for touch capability or screen width
     const checkMobile = () => {
       setIsMobile(
         window.matchMedia("(max-width: 768px)").matches ||
@@ -21,11 +20,9 @@ export default function CustomCursor() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Single set of mouse coordinates
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
 
-  // High-frequency spring for an "instant but organic" feel
   const sX = useSpring(mouseX, { stiffness: 1000, damping: 40 });
   const sY = useSpring(mouseY, { stiffness: 1000, damping: 40 });
 
@@ -37,7 +34,7 @@ export default function CustomCursor() {
 
     const hover = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      // Detect links, buttons, or any clickable elements
+
       setIsHovering(
         !!(
           target.tagName === "A" ||
@@ -57,12 +54,13 @@ export default function CustomCursor() {
     };
   }, [mouseX, mouseY]);
 
+  if (isMobile) return null;
+
   return (
     <motion.div
       className="fixed top-0 left-0 pointer-events-none z-9999 border border-white flex items-center justify-center mix-blend-difference"
       style={{ x: sX, y: sY }}
       animate={{
-        // Morph from a small target square to a large UI ring
         width: isHovering ? 60 : 12,
         height: isHovering ? 60 : 12,
         backgroundColor: isHovering
@@ -75,7 +73,6 @@ export default function CustomCursor() {
       }}
       transition={{ type: "spring", stiffness: 300, damping: 25 }}
     >
-      {/* Tiny high-intensity "Data Point" in the center */}
       <motion.div
         className="w-1 h-1 bg-white"
         animate={{

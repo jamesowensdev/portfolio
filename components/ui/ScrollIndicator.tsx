@@ -15,7 +15,6 @@ export default function ScrollIndicator() {
       </span>
 
       <div className="relative flex items-center justify-center">
-        {/* The Animated Arrow */}
         <motion.svg
           width="24"
           height="24"
@@ -32,7 +31,6 @@ export default function ScrollIndicator() {
           <path d="M7 13l5 5 5-5M12 6v12" />
         </motion.svg>
 
-        {/* Subtle Radar Ping at the arrow tip */}
         <motion.div
           className="absolute bottom-0 w-8 h-8 rounded-full border border-orange-500/20"
           animate={{ scale: [1, 2], opacity: [0.5, 0] }}

@@ -14,9 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${inter.className} bg-[#050214] antialiased cursor-none`}
-      >
+      <body className={`${inter.className} bg-[#050214] antialiased`}>
         {/* Z-INDEX 0: The background that needs to "feel" the mouse */}
         <HeatmapBackground />
 

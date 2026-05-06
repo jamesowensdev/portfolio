@@ -22,7 +22,6 @@ export default function HeatmapBackground() {
     mouseY.set(window.innerHeight / 2);
 
     const checkMobile = () => {
-      // eslint-disable-next-line
       setIsMobile(window.innerWidth < 768);
     };
 
@@ -60,19 +59,18 @@ export default function HeatmapBackground() {
              MOBILE AUTO-FLOAT ANIMATION
           ========================================= */
           <>
-            {/* Outer Purple */}
             <motion.div
               animate={{ x: ["10%", "50%", "10%"], y: ["10%", "40%", "10%"] }}
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
               className="absolute w-[80vw] h-[80vw] rounded-full bg-purple-900 opacity-20 blur-[100px]"
             />
-            {/* Mid Orange */}
+
             <motion.div
               animate={{ x: ["50%", "10%", "50%"], y: ["40%", "80%", "40%"] }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               className="absolute w-[60vw] h-[60vw] rounded-full bg-orange-600 opacity-20 blur-[80px]"
             />
-            {/* Hot Yellow/Orange Core */}
+
             <motion.div
               animate={{ x: ["30%", "70%", "30%"], y: ["60%", "20%", "60%"] }}
               transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
@@ -84,7 +82,6 @@ export default function HeatmapBackground() {
              DESKTOP MOUSE-TRACKING
           ========================================= */
           <>
-            {/* Outer Purple */}
             <motion.div
               className="absolute top-0 left-0 w-[45vw] h-[45vw] rounded-full bg-purple-900 opacity-30 blur-[120px]"
               style={{
@@ -94,7 +91,7 @@ export default function HeatmapBackground() {
                 translateY: "-50%",
               }}
             />
-            {/* Mid Orange */}
+
             <motion.div
               className="absolute top-0 left-0 w-[25vw] h-[25vw] rounded-full bg-orange-600 opacity-50 blur-[80px]"
               style={{
@@ -104,7 +101,7 @@ export default function HeatmapBackground() {
                 translateY: "-50%",
               }}
             />
-            {/* Hot Yellow Core */}
+
             <motion.div
               className="absolute top-0 left-0 w-[10vw] h-[10vw] rounded-full bg-yellow-400 opacity-70 blur-[40px]"
               style={{
