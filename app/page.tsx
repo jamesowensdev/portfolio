@@ -59,7 +59,7 @@ export default function PortfolioPage() {
                 About Me
               </h3>
               <p className="mt-3 md:mt-4 text-xs md:text-sm text-white/40 leading-relaxed font-light">
-                Deatils of my personal and professional background.
+                Details of my personal and professional background.
               </p>
               <div className="mt-auto pt-4 flex items-center gap-3 font-mono text-[9px] text-white/20 group-hover:text-indigo-400 transition-colors">
                 <div className="h-px w-8 bg-white/10 group-hover:bg-indigo-400 transition-all" />
