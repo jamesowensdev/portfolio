@@ -160,7 +160,7 @@ export default function PortfolioPage() {
                 },
                 {
                   name: "GitHub",
-                  href: "https://github.com/jamesowensdev",
+                  url: "https://github.com/jamesowensdev",
                   hover: "hover:text-purple-400",
                 },
                 {
