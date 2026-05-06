@@ -21,7 +21,7 @@ const PROJECTS = [
     techStack: ["R", "terra", "tidyverse", "R6", "sf"],
     repo: "https://github.com/jamesowensdev/cpf_simulation",
     features: [
-      "Multistate model simulating CPF movement behavior through correlated random walks.",
+      "Multistate model simulating CPF movement behaviour through correlated random walks.",
       "The agent interacts with the environment, reading in raster data to determine the forage quality in a given location.",
       "Simulates camera trap array monitoring, with imperfect reverse sigmoid detection chance",
     ],
@@ -81,7 +81,7 @@ const PROJECTS = [
     features: [
       "Custom-built BFCache management for seamless, instant page transitions.",
       "Algorithmically driven Canvas and SVG animations calculating spatial dynamics at 60fps.",
-      "Fully responsive split-pane terminal aesthetic mimicking specialized GIS software.",
+      "Fully responsive split-pane terminal aesthetic mimicking specialised GIS software.",
     ],
     image: "/code.jpg",
   },
@@ -118,7 +118,7 @@ export default function ProjectsPage() {
           <header className="mb-12 md:mb-16">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }} // Standard animate for immediate load
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className="flex items-center gap-4 mb-4"
             >
@@ -142,18 +142,20 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-3xl prose prose-invert"
+            className="w-full max-w-3xl"
           >
-            <p className="text-lg md:text-xl leading-relaxed font-light mb-6 text-orange-500">
-              Bridging the gap between ecology and technology
-            </p>
-            <p className="text-sm md:text-base text-white/60 leading-relaxed mb-8">
-              Below is a collection of technical projects I have completed
-              recently. These were made as part of my PhD research, to learn new
-              skills, or simply to make my day-to-day or research workflow more
-              efficient. <br></br> <br></br>
-              Select a directory to view the project specifications.
-            </p>
+            <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
+              <p className="text-lg md:text-xl leading-relaxed font-light mb-6 text-orange-500">
+                Bridging the gap between ecology and technology
+              </p>
+              <p className="text-sm md:text-base text-white/60 leading-relaxed mb-0">
+                Below is a collection of technical projects I have completed
+                recently. These were made as part of my PhD research, to learn
+                new skills, or simply to make my day-to-day or research workflow
+                more efficient. <br></br> <br></br>
+                Select a directory to view the project specifications.
+              </p>
+            </div>
           </motion.div>
           <div className="hidden md:block">
             <ScrollIndicator />
@@ -169,7 +171,7 @@ export default function ProjectsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ root: scrollRef, once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="w-full h-[75vh] md:h-[650px] bg-black/40 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden flex flex-col md:flex-row shadow-2xl"
+            className="w-full h-[75vh] md:h-[650px] bg-black/20 backdrop-blur-md border border-white/10 rounded-sm overflow-hidden flex flex-col md:flex-row shadow-2xl"
           >
             {/* LEFT PANE: DIRECTORY NAVIGATION */}
             <nav className="w-full md:w-[30%] shrink-0 border-b md:border-b-0 md:border-r border-white/10 bg-white/[0.02] flex flex-col">
@@ -252,7 +254,7 @@ export default function ProjectsPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
                     <div className="md:col-span-8 prose prose-invert">
-                      <p className="text-sm md:text-base text-white/70 leading-relaxed font-light mb-8">
+                      <p className="text-sm md:text-base text-white/60 leading-relaxed font-light mb-8">
                         {activeProject.description}
                       </p>
 

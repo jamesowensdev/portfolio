@@ -69,8 +69,8 @@ export default function AboutPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center">
-              {/* Left Column: Bio Text */}
-              <div className="md:col-span-7 prose prose-invert max-w-none">
+              {/* Left Column: Bio Text - NOW WRAPPED IN GLASSMORPHISM */}
+              <div className="md:col-span-7 bg-black/40 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
                 <p className="text-lg md:text-xl leading-relaxed text-orange-500 font-light mb-6">
                   PhD Researcher, Ecologist, Father
                 </p>
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 <div className="absolute -bottom-4 left-1/2 w-[1px] h-2 bg-white/20 z-20 pointer-events-none" />
 
                 {/* Inner Image Container */}
-                <div className="relative aspect-[4/5] w-full bg-black/40 border border-white/10 overflow-hidden backdrop-blur-sm p-2">
+                <div className="relative aspect-[4/5] w-full bg-black/20 border border-white/10 overflow-hidden backdrop-blur-sm p-2">
                   <div className="relative w-full h-full overflow-hidden bg-[#050214]">
                     <Image
                       src="/profile2.jpg"
@@ -112,17 +112,6 @@ export default function AboutPage() {
 
                     {/* Scanline Overlay */}
                     <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.3)_50%)] bg-[length:100%_4px] pointer-events-none opacity-50 mix-blend-overlay" />
-
-                    {/* Data Overlay Text */}
-                    <div className="absolute bottom-3 right-3 text-[8px] font-mono tracking-widest text-right pointer-events-none drop-shadow-md">
-                      <p className="text-white/50 mb-0.5">IMG_SRC: BIO_01</p>
-                      <p className="text-indigo-400/80 group-hover:text-indigo-400 transition-colors">
-                        LAT: 54.5973° N
-                      </p>
-                      <p className="text-indigo-400/80 group-hover:text-indigo-400 transition-colors">
-                        LON: 5.9301° W
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -148,43 +137,45 @@ export default function AboutPage() {
               02 // PROFESSIONAL_BACKGROUND
             </h2>
 
-            <div className="prose prose-invert max-w-none">
-              <p className="text-lg md:text-xl leading-relaxed text-white/90 font-light mb-6 max-w-3xl">
-                I am a{" "}
-                <span className="text-yellow-300 font-medium italic">
-                  Spatial Ecologist
-                </span>{" "}
-                and{" "}
-                <span className="text-yellow-300 font-medium italic">
-                  Data Scientist
-                </span>{" "}
-                utilising my software engineering background to bridge the gap
-                between raw data and actionable conservation strategy.
-              </p>
-              <p className="text-sm md:text-base text-white/60 leading-relaxed mb-8 max-w-3xl">
-                I am currently a PhD researcher in Spatial Ecology at
-                Queen&apos;s University Belfast, with a focus on geographic
-                profiling and bayesian modelling. I was previously employed as a
-                software engineer where I worked on Java based web applications,
-                and overhauling legacy systems written in C.
-              </p>
+            <div className="max-w-none">
+              <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl mb-10 max-w-3xl prose prose-invert">
+                <p className="text-lg md:text-xl leading-relaxed text-white font-light mb-6">
+                  I am a{" "}
+                  <span className="text-yellow-300 font-medium italic">
+                    Spatial Ecologist
+                  </span>{" "}
+                  and{" "}
+                  <span className="text-yellow-300 font-medium italic">
+                    Data Scientist
+                  </span>{" "}
+                  utilising my software engineering background to bridge the gap
+                  between raw data and actionable conservation strategy.
+                </p>
+                <p className="text-sm md:text-base text-white/60 leading-relaxed">
+                  I am currently a PhD researcher in Spatial Ecology at
+                  Queen&apos;s University Belfast, with a focus on geographic
+                  profiling and bayesian modelling. I was previously employed as
+                  a software engineer where I worked on Java based web
+                  applications, and overhauling legacy systems written in C.
+                </p>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose mb-10 max-w-3xl">
-                <div className="p-5 bg-white/5 border border-white/10 rounded-sm backdrop-blur-sm hover:border-orange-500/30 transition-colors">
+                <div className="p-5 bg-black/20 border border-white/10 rounded-sm backdrop-blur-md hover:border-orange-500/30 transition-colors shadow-xl">
                   <h3 className="font-mono text-[10px] text-indigo-400 uppercase tracking-widest mb-3">
                     Data Science & Geospatial Analysis
                   </h3>
                   <ul className="space-y-3">
-                    <li className="text-xs">
+                    <li className="text-xs text-white/60">
                       <span className="text-orange-500">Python:</span> pandas,
                       numpy, geopandas, scikit-learn, xarray, rasterio,
                       matplotlib, seaborn, steamlit
                     </li>
-                    <li className="text-xs">
+                    <li className="text-xs text-white/70">
                       <span className="text-orange-500">R:</span> tidyverse,
                       terra, sf, brms, shiny, R6, vegan, lme4, mgcv
                     </li>
-                    <li className="text-xs">
+                    <li className="text-xs text-white/60">
                       <span className="text-orange-500">
                         Geospatial Software:
                       </span>{" "}
@@ -192,20 +183,20 @@ export default function AboutPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="p-5 bg-white/5 border border-white/10 rounded-sm backdrop-blur-sm hover:border-yellow-400/30 transition-colors">
+                <div className="p-5 bg-black/20 border border-white/10 rounded-sm backdrop-blur-md hover:border-yellow-400/30 transition-colors shadow-xl">
                   <h3 className="font-mono text-[10px] text-orange-500 uppercase tracking-widest mb-3">
                     Software Engineering
                   </h3>
                   <ul className="space-y-3">
-                    <li className="text-xs">
+                    <li className="text-xs text-white/60">
                       <span className="text-yellow-300">Languages:</span>{" "}
                       Python, R, Java, C, C++, TypeScript, Rust
                     </li>
-                    <li className="text-xs">
+                    <li className="text-xs text-white/60">
                       <span className="text-yellow-300">Web & Front End:</span>{" "}
                       React, HTML5, CSS3 (SASS, Tailwind)
                     </li>
-                    <li className="text-xs">
+                    <li className="text-xs text-white/60">
                       <span className="text-yellow-300">Databases:</span>{" "}
                       PostgreSQL, MySQL, MongoDB, OracleDB
                     </li>
@@ -217,7 +208,7 @@ export default function AboutPage() {
               <div className="not-prose mt-4 md:mt-0">
                 <Link
                   href="/research"
-                  className="group inline-flex items-center gap-4 px-6 py-4 bg-orange-500/10 border border-orange-500/30 rounded-sm hover:bg-orange-500/20 hover:border-yellow-400/50 hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300 cursor-none"
+                  className="group inline-flex items-center gap-4 px-6 py-4 bg-orange-500/10 border border-orange-500/30 rounded-sm hover:bg-orange-500/20 hover:border-yellow-300/50 hover:shadow-[0_0_20px_rgba(249,115,22,0.15)] transition-all duration-300 cursor-none"
                 >
                   <span className="text-xs font-mono uppercase tracking-[0.2em] text-orange-500 group-hover:text-yellow-300 transition-colors">
                     View Research
@@ -281,10 +272,10 @@ export default function AboutPage() {
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         OCTOBER 2025 — PRESENT
                       </div>
-                      <h3 className="text-lg md:text-xl font-bold tracking-tight text-white mb-1">
+                      <h3 className="text-lg md:text-xl font-bold tracking-tight text-orange-500 mb-1">
                         PhD Researcher in Spatial Ecology
                       </h3>
-                      <h4 className="text-sm font-light text-white/60 mb-4 italic">
+                      <h4 className="text-sm font-light text-indigo-400 mb-4 italic">
                         Queen&apos;s University Belfast
                       </h4>
                       <ul className="space-y-2 text-xs md:text-sm text-white/50 leading-relaxed list-disc list-outside ml-4 marker:text-white/20">
@@ -310,10 +301,10 @@ export default function AboutPage() {
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2023 — OCTOBER 2025
                       </div>
-                      <h3 className="text-lg md:text-xl font-bold tracking-tight text-white mb-1">
+                      <h3 className="text-lg md:text-xl font-bold tracking-tight text-orange-500 mb-1">
                         Software Engineer
                       </h3>
-                      <h4 className="text-sm font-light text-white/60 mb-4 italic">
+                      <h4 className="text-sm font-light text-indigo-400 mb-4 italic">
                         BT Group
                       </h4>
                       <ul className="space-y-2 text-xs md:text-sm text-white/50 leading-relaxed list-disc list-outside ml-4 marker:text-white/20">
@@ -328,7 +319,7 @@ export default function AboutPage() {
                           functionality of existing systems.
                         </li>
                         <li>
-                          Development is mainly done in Java and SQL utilising
+                          Development was mainly done in Java and SQL utilising
                           Oracle DB. Releases are deployed using GitLab for
                           source control and Jenkins for build & deployment.
                         </li>
@@ -352,10 +343,10 @@ export default function AboutPage() {
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2021 — SEPTEMBER 2023
                       </div>
-                      <h3 className="text-lg md:text-xl font-bold tracking-tight text-white mb-1">
+                      <h3 className="text-lg md:text-xl font-bold tracking-tight text-orange-500 mb-1">
                         Technology Recruitment Consultant
                       </h3>
-                      <h4 className="text-sm font-light text-white/60 mb-4 italic">
+                      <h4 className="text-sm font-light text-indigo-400 mb-4 italic">
                         Anson McCade
                       </h4>
                       <ul className="space-y-2 text-xs md:text-sm text-white/50 leading-relaxed list-disc list-outside ml-4 marker:text-white/20">
@@ -393,10 +384,10 @@ export default function AboutPage() {
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2022 — JUNE 2024
                       </div>
-                      <h3 className="text-base md:text-lg font-bold tracking-tight text-white mb-1">
+                      <h3 className="text-base md:text-lg font-bold tracking-tight text-orange-500 mb-1">
                         Postgraduate Diploma in Software Development
                       </h3>
-                      <h4 className="text-sm font-light text-orange-500">
+                      <h4 className="text-sm font-light text-indigo-400">
                         Distinction
                       </h4>
                     </div>
@@ -405,14 +396,14 @@ export default function AboutPage() {
                       <div className="text-[10px] font-mono text-yellow-300 tracking-widest mb-1">
                         SEPTEMBER 2022 — JUNE 2024
                       </div>
-                      <h3 className="text-base md:text-lg font-bold tracking-tight text-white mb-1">
+                      <h3 className="text-base md:text-lg font-bold tracking-tight text-orange-500 mb-1">
                         MSc (Hons) Zoology with Animal Behaviour
                       </h3>
-                      <h4 className="text-sm font-light text-orange-500">
+                      <h4 className="text-sm font-light text-indigo-400">
                         First Class Honours
                       </h4>
                       <h5 className="text-sm font-light text-white/60 mt-2">
-                        <em className="text-indigo-400">Thesis subjects :</em>
+                        <em className="text-white">Thesis subjects :</em>
                         <br />
                         Social and Demographic Drivers of Male Elephant
                         Sociality. <br />
