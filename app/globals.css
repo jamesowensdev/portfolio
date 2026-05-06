@@ -28,3 +28,15 @@ body {
 * {
     cursor: none !important;
 }
+
+@media (max-width: 768px) {
+    html,
+    body {
+        cursor: auto !important;
+    }
+    @media (hover: none) {
+        .hover\:text-white:hover {
+            color: inherit;
+        }
+    }
+}
