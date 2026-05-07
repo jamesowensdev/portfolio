@@ -72,7 +72,7 @@ export default function AboutPage() {
               {/* Left Column: Bio Text - NOW WRAPPED IN GLASSMORPHISM */}
               <div className="md:col-span-7 bg-black/10 backdrop-blur-md border border-white/10 rounded-sm p-6 md:p-8 shadow-2xl prose prose-invert max-w-none">
                 <p className="text-lg md:text-xl leading-relaxed text-orange-500 font-light mb-6">
-                  PhD Researcher, Ecologist, Father
+                  PhD Researcher, Ecologist, Dad
                 </p>
                 <p className="text-sm md:text-base text-white/60 leading-relaxed">
                   I am a PhD researcher in ecology, with a passion for nature
