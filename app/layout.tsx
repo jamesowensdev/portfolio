@@ -13,6 +13,22 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jamesowens.xyz"),
   title: "James Owens // Interactive Portfolio",
   description: "PhD Researcher in Spatial Ecology and Data Scientist.",
+  openGraph: {
+    title: "James Owens // Interactive Portfolio",
+    description: "PhD Researcher in Spatial Ecology and Data Scientist.",
+    url: "https://jamesowens.xyz",
+    siteName: "James Owens Portfolio",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "James Owens - Spatial Ecology & Data Science Portfolio",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
