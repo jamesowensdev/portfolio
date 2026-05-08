@@ -101,7 +101,6 @@ const PROJECTS = [
       "Tauri",
       "Svelte",
       "TypeScript",
-      "pdf_oxide",
       "Gemma-4",
       "LM Studio",
       "Obsidian",
