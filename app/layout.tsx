@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "James Owens Portfolio",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "https://jamesowens.xyz/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "James Owens - Spatial Ecology & Data Science Portfolio",
