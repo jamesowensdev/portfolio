@@ -81,7 +81,7 @@ const PROJECTS = [
     features: [
       "Custom-built BFCache management for seamless, instant page transitions.",
       "Algorithmically driven Canvas and SVG animations calculating spatial dynamics at 60fps.",
-      "Fully responsive split-pane terminal aesthetic mimicking specialised GIS software.",
+      "Fully responsive split-pane terminal aesthetic mimicking specialised GIS software. ",
     ],
     image: "/code.jpg",
   },
