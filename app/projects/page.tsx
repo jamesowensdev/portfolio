@@ -85,6 +85,40 @@ const PROJECTS = [
     ],
     image: "/code.jpg",
   },
+  {
+    id: "04",
+    title: "Autonomous Research Pipeline",
+    type: "RAG Ingestion Engine",
+    year: "2026",
+    color: "from-purple-400 to-indigo-400",
+    accent: "text-indigo-400",
+    border: "border-indigo-500",
+    bgHover: "hover:bg-indigo-500/10",
+    description:
+      "Autonomous research pipeline to parse, tag and summarise academic papers using locally hosted llms.",
+    techStack: [
+      "Rust",
+      "Tauri",
+      "Svelte",
+      "TypeScript",
+      "pdf_oxide",
+      "Gemma-4",
+      "LM Studio",
+      "Obsidian",
+      "Tokio",
+      "Reqwest",
+      "Serde",
+    ],
+    repo: "https://github.com/jamesowensdev/phd-research-pipeline",
+    features: [
+      "Event-Driven Ingestion Engine: Utilises a multi-threaded Rust notify watcher to create a zero-latency drop-zone architecture.",
+      "PDF-to-Markdown Pipeline: Implements TextPipeline to solve the multi-column layout problem inherent in academic PDFs, and prepares the text for ingestion into the RAG system.",
+      "RAG Ingestion Engine: Ingests md content into a local vector database for efficient retrieval and summarisation.",
+      "Private Edge-AI Orchestration: Architected a local-only inference loop using Gemma-4 models on Blackwell architecture.",
+      "Repo private pending some neatening up and base feature additions.",
+    ],
+    image: "/rust.png",
+  },
 ];
 
 export default function ProjectsPage() {
